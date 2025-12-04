@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Desenvolvimento - Tela 1</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="./Css/style.css">
+</head>
+<body>
+
+<div class="container">
+    
+    <div style="text-align: right; margin-bottom: 10px;">
+        <a href="tela2.html" style="font-size: 18px; text-decoration: none; color: blue;">
+            Ir para Tela 2 (Professores) &#8594;
+        </a>
+    </div>
+    <h1>Tela 1: Gestão de Alunos</h1>
+
+    <div class="section">
+        <h2>Parte 1: Listagem e Edição</h2>
+
+        <div class="filters">
+            <div class="form-group">
+                <label for="filterDegree">Filtrar por Série (Degree):</label>
+                <select id="filterDegree">
+                    <option value="">Todos</option>
+                </select>    
+            </div>
+            <div class="form-group">
+                <label for="filterClass">Filtrar por Turma (Class):</label>
+                <select id="filterClass">
+                    <option value="">Todas</option>
+                </select> 
+            </div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>RA</th>
+                    <th>Nome</th>
+                    <th>Série (Degree)</th>
+                    <th>Turma (Class)</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="studentsTableBody">
+                </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Parte 2: Simulação e Gráfico</h2>
+        <p>Clique abaixo para gerar +300 alunos aleatórios.</p>
+        <button id="btnGenerate" class="btn-gen"> Gerar +300 Alunos</button>
+
+        <div class="chart-container">
+            <canvas id="distributionChart"></canvas>
+        </div>
+    </div>
+</div>
+
+<script src="./Js/script.js"></script>
+
+</body>
+</html>

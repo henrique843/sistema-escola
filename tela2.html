@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Desenvolvimento - Tela 2</title>
+    <link rel="stylesheet" href="./Css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="nav-bar">
+        <a href="tela1.html" class="nav-link">← Voltar para Tela 1 (Alunos)</a>
+    </div>
+
+    <h1>Tela 2: Gestão de Professores</h1>
+
+    <div class="section">
+        <h2>Parte 1: Visão Geral e Alunos</h2>
+        
+        <div class="filters">
+            <div class="form-group">
+                <label for="filterDegree">Filtrar por Série:</label>
+                <select id="filterDegree">
+                    <option value="">Todas</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="filterClass">Filtrar por Turma:</label>
+                <select id="filterClass">
+                    <option value="">Todas</option>
+                </select>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 20%">Professor</th>
+                    <th style="width: 20%">Matéria</th>
+                    <th>Séries e Turmas (Relações)</th>
+                </tr>
+            </thead>
+            <tbody id="relationshipsTableBody">
+                </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Parte 2: Novo Relacionamento</h2>
+        <p>Crie um novo vínculo de Professor + Matéria + Série + Turma.</p>
+        
+        <div class="form-card">
+            <div class="form-row">
+                <div>
+                    <label>Professor:</label>
+                    <select id="newTeacher" class="edit-input"></select>
+                </div>
+                <div>
+                    <label>Matéria:</label>
+                    <select id="newMatter" class="edit-input"></select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div>
+                    <label>Série (Degree):</label>
+                    <select id="newDegree" class="edit-input"></select>
+                </div>
+                <div>
+                    <label>Turma (Class):</label>
+                    <select id="newClass" class="edit-input"></select>
+                </div>
+            </div>
+            <button id="btnAddRelationship" class="btn-save" style="width: 100%">Adicionar Relacionamento</button>
+        </div>
+    </div>
+</div>
+
+<div id="studentModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2 id="modalTitle">Alunos da Série</h2>
+        <ul id="modalList" style="margin-top: 15px; padding-left: 20px;"></ul>
+    </div>
+</div>
+
+<script src="./Js/tela2.js"></script>
+
+</body>
+</html>
